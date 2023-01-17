@@ -5,10 +5,10 @@ function engCard(data) {
   const eng = `
   <div class="card w-64 bg-white shadow-xl m-5">
   <div class="card-body">
-    <h3 class="card-title">${data.engName}</h3>
-    <p> ID: ${data.engId}</p>
-    <p> EMAIL: ${data.engEmail}</p>
-    <p> GITHUB: ${data.engGithub}</p>
+    <h3 class="card-title">${data.name}</h3>
+    <p> ID: ${data.id}</p>
+    <p> EMAIL: ${data.email}</p>
+    <p> GITHUB: ${data.github}</p>
   </div>
 </div>
 `;
@@ -22,10 +22,10 @@ function intCard(data) {
     `
   <div class="card w-64 bg-white shadow-xl m-5">
   <div class="card-body">
-    <h3 class="card-title">${data.inName}</h3>
-    <p> ID: ${data.inId}</p>
-    <p> EMAIL: ${data.inEmail}</p>
-    <p> SCHOOL: ${data.inSchool}</p>
+    <h3 class="card-title">${data.name}</h3>
+    <p> ID: ${data.id}</p>
+    <p> EMAIL: ${data.email}</p>
+    <p> SCHOOL: ${data.school}</p>
   </div>
 </div>
 `;
@@ -61,7 +61,7 @@ function generateMarkdown(teamCards) {
     } else intCard(element);
 
   });
-  const html = `
+  const html =`
     <!DOCTYPE html>
     <html lang="en" data-theme="luxury">
       <head>
@@ -83,8 +83,6 @@ function generateMarkdown(teamCards) {
         </header>
         <main class="container">
           <section class="grid md:grid-cols-4 gap-2 min-h-screen" id="intro">
-          ${endTeam}
-            <section class="md:col-span-1 flex flex-col p-2" id="search-col">
               <div class="history flex flex-col">
                 <div class="form-control">
                 </div>
@@ -93,19 +91,14 @@ function generateMarkdown(teamCards) {
               </div>
             </section>
             <section class="md:col-span-3 flex flex-wrap bg-base-200 p-5 justify-center" id="content">
-              <h1 class="text-5xl font-bold"> </h1>
-              <p class="py-6">
-              </p>
-            </section>
+            ${endTeam}
+           
           </section>
         </main>
       </body>
-    </html>   
-`
+    </html> `   
+
   return html;
 }
 
 exports.generateMarkdown = generateMarkdown;
-exports.intCard = intCard;
-exports.engCard = engCard;
-exports.manCard = manCard;
