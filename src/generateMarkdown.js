@@ -7,8 +7,8 @@ function engCard(data) {
   <div class="card-body">
     <h3 class="card-title">${data.name}</h3>
     <p> ID: ${data.id}</p>
-    <p> EMAIL: ${data.email}</p>
-    <p> GITHUB: ${data.github}</p>
+    <a href= "mailto:${data.email}">EMAIL: ${data.email}</a>
+    <a href= https://github.com/${data.github}>GITHUB: ${data.github}</a>
   </div>
 </div>
 `;
@@ -24,7 +24,7 @@ function intCard(data) {
   <div class="card-body">
     <h3 class="card-title">${data.name}</h3>
     <p> ID: ${data.id}</p>
-    <p> EMAIL: ${data.email}</p>
+    <a href= "mailto: ${data.email}">EMAIL: ${data.email}</a>
     <p> SCHOOL: ${data.school}</p>
   </div>
 </div>
@@ -40,7 +40,7 @@ function manCard(data) {
   <div class="card-body">
     <h3 class="card-title">${data.name}</h3>
     <p> ID: ${data.id}</p>
-    <p> EMAIL: ${data.email}</p>
+    <a href= "mailto:${data.email}">EMAIL: ${data.email}</a>
     <p> Office number: ${data.officeNum}</p>
   </div>
 </div>
